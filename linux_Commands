@@ -1,0 +1,163 @@
+
+
+zadmin@vm-lab59-11-354:~$ whoami
+zadmin
+
+zadmin@vm-lab59-11-354:~$ uname
+Linux
+zadmin@vm-lab59-11-354:~$ uname -a
+Linux vm-lab59-11-354 5.15.0-1037-gcp #45~20.04.1-Ubuntu SMP Thu Jun 22 08:31:09 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+zadmin@vm-lab59-11-354:~$ mkdir demofile
+zadmin@vm-lab59-11-354:~$ cd demofile
+zadmin@vm-lab59-11-354:~/demofile$ touch file1.txt
+zadmin@vm-lab59-11-354:~/demofile$ vi file1.txt
+zadmin@vm-lab59-11-354:~/demofile$ cat file1.txt
+
+Hey.! This is line 1.
+Welcome. !This is line 2.
+I am practising grep . this is line 3
+Also, sort function. This is line 4.
+
+zadmin@vm-lab59-11-354:~/demofile$ sort file1.txt > sortedfile1.txt
+zadmin@vm-lab59-11-354:~/demofile$ cat sortedfile.txt
+cat: sortedfile.txt: No such file or directory
+zadmin@vm-lab59-11-354:~/demofile$ cat sortedfile1.txt
+
+Also, sort function. This is line 4.
+Hey.! This is line 1.
+I am practising grep . this is line 3
+Welcome. !This is line 2.
+
+zadmin@vm-lab59-11-354:~/demofile$ grep -n line sortedfile1.txt
+
+2:Also, sort function. This is line 4.
+3:Hey.! This is line 1.
+4:I am practising grep . this is line 3
+5:Welcome. !This is line 2.
+
+zadmin@vm-lab59-11-354:~/demofile$ man sort
+zadmin@vm-lab59-11-354:~/demofile$ mv sortedfile1.txt renamed_sortedfile1.txt
+zadmin@vm-lab59-11-354:~/demofile$ ls
+file1.txt  renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~/demofile$ ls -aR
+.:
+.  ..  file1.txt  renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~$ cd Documents
+zadmin@vm-lab59-11-354:~/Documents$ ls -a
+.  ..  .git  linuxAssignment  workspace-spring-tool-suite-4-4.20.1.RELEASE
+
+zadmin@vm-lab59-11-354:~/demofile$ ls -l
+total 8
+-rw-rw-r-- 1 zadmin zadmin 124 Jun 19 12:57 file1.txt
+-rw-rw-r-- 1 zadmin zadmin 124 Jun 19 12:58 renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~/demofile$ chmod 744 renamed_sortedfile1.txt
+zadmin@vm-lab59-11-354:~/demofile$ ls -l
+total 8
+-rw-rw-r-- 1 zadmin zadmin 124 Jun 19 12:57 file1.txt
+-rwxr--r-- 1 zadmin zadmin 124 Jun 19 12:58 renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~/Desktop$ ls -lr
+total 92
+-rwxr-xr-x 1 zadmin zadmin   278 Jun 14  2023  slack.desktop
+-rwxr-xr-x 1 zadmin zadmin   317 Oct  8  2020  mysql-workbench.desktop
+-rwxr-xr-x 1 zadmin zadmin   265 Jul 14  2023  mongodb-compass.desktop
+-rwxr-xr-x 1 zadmin zadmin 21412 May 25  2023  libreoffice-writer.desktop
+-rwxr-xr-x 1 zadmin zadmin  8515 Jul 14  2023  google-chrome.desktop
+-rwxr-xr-x 1 zadmin zadmin  9261 Jul 11  2023  firefox.desktop
+-rwxr-xr-x 1 zadmin zadmin   455 Jul 21  2023  com.github.dail8859.NotepadNext.desktop
+-rwxr-xr-x 1 zadmin zadmin   469 Jul 12  2023  code.desktop
+drwxrwxr-x 4 zadmin zadmin  4096 Jun 19 13:06  Sugirtha
+-rw-rw-r-- 1 zadmin zadmin    21 Nov 10  2023 'Sudo password '
+lrwxrwxrwx 1 zadmin zadmin    40 Nov 13  2023  SpringToolSuite4 -> /opt/sts-4.20.1.RELEASE/SpringToolSuite4
+-rwxrwxr-x 1 zadmin zadmin   295 Jul 21  2023  Postman.desktop
+-rwxrwxr-x 1 zadmin zadmin   339 Jul 21  2023 'Intellij Idea.desktop'
+-rw-rw-r-- 1 zadmin zadmin   598 Jul 22  2023 'Instructions for Applications'
+-rwxrwxr-x 1 zadmin zadmin   308 Jul 21  2023 'Eclipse IDE for Java Developers – 2023-06.desktop'
+
+
+
+zadmin@vm-lab59-11-354:~/Desktop$ ls -laR
+.:
+total 100
+drwxr-xr-x  3 zadmin zadmin  4096 Jun 19 09:19  .
+drwxr-xr-x 41 zadmin zadmin  4096 Jun 19 12:57  ..
+-rwxrwxr-x  1 zadmin zadmin   308 Jul 21  2023 'Eclipse IDE for Java Developers - 2023-06.desktop'
+-rw-rw-r--  1 zadmin zadmin   598 Jul 22  2023 'Instructions for Applications'
+-rwxrwxr-x  1 zadmin zadmin   339 Jul 21  2023 'Intellij Idea.desktop'
+-rwxrwxr-x  1 zadmin zadmin   295 Jul 21  2023  Postman.desktop
+lrwxrwxrwx  1 zadmin zadmin    40 Nov 13  2023  SpringToolSuite4 -> /opt/sts-4.20.1.RELEASE/SpringToolSuite4
+-rw-rw-r--  1 zadmin zadmin    21 Nov 10  2023 'Sudo password '
+drwxrwxr-x  4 zadmin zadmin  4096 Jun 19 13:06  Sugirtha
+-rwxr-xr-x  1 zadmin zadmin   469 Jul 12  2023  code.desktop
+-rwxr-xr-x  1 zadmin zadmin   455 Jul 21  2023  com.github.dail8859.NotepadNext.desktop
+-rwxr-xr-x  1 zadmin zadmin  9261 Jul 11  2023  firefox.desktop
+-rwxr-xr-x  1 zadmin zadmin  8515 Jul 14  2023  google-chrome.desktop
+-rwxr-xr-x  1 zadmin zadmin 21412 May 25  2023  libreoffice-writer.desktop
+-rwxr-xr-x  1 zadmin zadmin   265 Jul 14  2023  mongodb-compass.desktop
+-rwxr-xr-x  1 zadmin zadmin   317 Oct  8  2020  mysql-workbench.desktop
+-rwxr-xr-x  1 zadmin zadmin   278 Jun 14  2023  slack.desktop
+
+./Sugirtha:
+total 56
+drwxrwxr-x 4 zadmin zadmin  4096 Jun 19 13:06 .
+drwxr-xr-x 3 zadmin zadmin  4096 Jun 19 09:19 ..
+drwxrwxr-x 8 zadmin zadmin  4096 Jun 19 10:21 .git
+-rw-rw-r-- 1 zadmin zadmin   129 Jun 19 13:06 .~lock.linux_commands.odt#
+drwxrwxr-x 2 zadmin zadmin  4096 Jun 19 09:31 Sugirtha_Demo1
+-rw-rw-r-- 1 zadmin zadmin   513 Jun 19 10:02 edited_firstfile.txt
+-rw-rw-r-- 1 zadmin zadmin   271 Jun 19 09:37 inversed_outputfile.txt
+-rw-rw-r-- 1 zadmin zadmin 16865 Jun 19 13:06 linux_commands.odt
+-rwxr----x 1 zadmin zadmin   116 Jun 19 09:49 secondfile.txt
+-rw-rw-r-- 1 zadmin zadmin   240 Jun 19 10:08 thirdfile.txt
+
+./Sugirtha/.git:
+total 52
+drwxrwxr-x  8 zadmin zadmin 4096 Jun 19 10:21 .
+drwxrwxr-x  4 zadmin zadmin 4096 Jun 19 13:06 ..
+-rw-rw-r--  1 zadmin zadmin   14 Jun 19 09:22 COMMIT_EDITMSG
+-rw-rw-r--  1 zadmin zadmin   23 Jun 19 09:19 HEAD
+drwxrwxr-x  2 zadmin zadmin 4096 Jun 19 09:19 branches
+
+
+zadmin@vm-lab59-11-354:~/demofile$ head -n 2 file1.txt
+Hey.! This is line 1.
+Welcome. !This is line 2.
+
+zadmin@vm-lab59-11-354:~/demofile$ tail -n 2 file1.txt
+Also, sort function. This is line 4.
+
+zadmin@vm-lab59-11-354:~/demofile$ mkdir SampleDirectory1 SampleDirectory2
+zadmin@vm-lab59-11-354:~/demofile$ ls
+SampleDirectory1  SampleDirectory2  file1.txt  renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~/demofile$ cp file1.txt SampleDirectory1
+zadmin@vm-lab59-11-354:~/demofile$ ls SampleDirectory1
+file1.txt
+
+zadmin@vm-lab59-11-354:~/demofile$ rmdir SampleDirectory1
+rmdir: failed to remove 'SampleDirectory1': Directory not empty
+
+zadmin@vm-lab59-11-354:~/demofile$ rm -R SampleDirectory1
+zadmin@vm-lab59-11-354:~/demofile$ ls
+SampleDirectory2  file1.txt  renamed_sortedfile1.txt
+
+zadmin@vm-lab59-11-354:~/demofile$ whatis -v grep
+grep (1)             - print lines that match patterns
+
+zadmin@vm-lab59-11-354:~/demofile$ history | tail -n 10
+  727  ls SampleDirectory1
+  728  rmdir SampleDirectory
+  729  rmdir SampleDirectory1
+  730  rm -R SampleDirectory1
+  731  ls
+  732  whatis -v grep
+  733  what is -n grep
+  734  whatis -n grep
+  735  history
+  736  history | tail -n 10
+
+zadmin@vm-lab59-11-354:~/demofile$ clear
